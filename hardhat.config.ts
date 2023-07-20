@@ -22,6 +22,14 @@ const config: HardhatUserConfig = {
       }
     ]
   },
+  networks: {
+    goerli: {
+      url: "https://eth-goerli.g.alchemy.com/v2/xRxE8vSyrjx5zG60VMEtB6gz9KFdr7r_",
+      accounts: [
+        "6b16f9c40a50b61e7cab952555082e1fa003926e30fbe50f84bbac0af0cb6a02",
+      ],
+    },
+  },
   circom: {
     // (optional) Base path for input files, defaults to `./circuits/`
     inputBasePath: "./circuits",
@@ -29,6 +37,9 @@ const config: HardhatUserConfig = {
     ptau: "powersOfTau28_hez_final_12.ptau",
     // (required) Each object in this array refers to a separate circuit
     circuits: JSON.parse(JSON.stringify(circuits))
+  },
+  etherscan: {
+    apiKey: "81HXADAXTQ1IH1TRTUHM1APNXR1M7CNX7N",
   },
 };
 
